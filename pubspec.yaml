@@ -1,0 +1,29 @@
+name: score_pubspec
+description: A sample command-line application.
+version: 1.0.0
+# homepage: https://www.example.com
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+publish_to: none
+executables:
+  score_pubspec:
+
+# dependencies:
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.16.0
+dependencies:
+  sliding_sheet:
+    git:
+      url: https://github.com/sncf-connect-tech/sliding_sheet.git
+  device_calendar:
+    git:
+      url: https://github.com/builttoroam/device_calendar.git
+      ref: 4.3.1
+  args: ^2.4.0
+  build_runner: ^2.4.6
+  github: ^9.18.0
+  json_annotation: ^4.8.1
+  json_serializable: ^6.7.0
+  pub_api_client: ^2.6.0
+  pubspec_lock_parse: ^2.2.0
