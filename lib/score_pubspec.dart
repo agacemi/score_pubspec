@@ -93,7 +93,7 @@ class PubspecAnalyzer {
           repoInfo = await githubClient.repositories.getRepository(RepositorySlug(owner, projectName));
           final contributors = githubClient.repositories.listContributors(RepositorySlug(owner, projectName));
           final commits = githubClient.repositories
-              .listCommits(RepositorySlug(owner, projectName), since: DateTime.now().subtract(Duration(days: 6 * 30)));
+              .listCommits(RepositorySlug(owner, projectName), since: DateTime.now().subtract(Duration(days: 2 * 30)));
           contributorsNumber = await contributors.length;
           activeContributorsNumber = (await commits.map((commit) => commit.author?.id).toSet()).length;
         } catch (exception) {

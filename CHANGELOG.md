@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.0.2 (2023-09-19)
+
+### Fix
+
+- Fix licence terms
+- Modify duration to be active contributor
+
 ## 0.0.1 (2023-09-19)
 
 ### Features
