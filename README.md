@@ -2,6 +2,8 @@ A Dart script to score libraries referenced in a given pubspec.lock. it generate
 
 The main goal is to get a general overview of the libraries used by the application and to assess the maintenance risk of using a given library.
 
+![score_pubspec screeshot](documentation/score_pubspec.png)
+
 ## Quick Start 🚀
 
 ### Installing 🧑‍💻
