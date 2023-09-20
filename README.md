@@ -1,6 +1,21 @@
-A Dart script to score libraries referenced in a given pubspec.lock. it generates an html file with lots of information about the lib. The rating is highlighted by colors (green, orange, red, black).
+A Dart script to score libraries referenced in a given pubspec.lock. it generates an html file with some information about the lib. The rating is highlighted by colors (green, orange, red, black). Scoring is based on the following scale:
 
-The main goal is to get a general overview of the libraries used by the application and to assess the maintenance risk of using a given library.
+|            Scoring            | high (green) | moderate (orange) | low (red) | minimal (dark red) |
+| :---------------------------: | :----------: | :---------------: | :-------: | :----------------: |
+|    Number of Contributors     |     >=5      |        <5         |    <2     |         0          |
+| Number of Active contributors |     >=5      |        <5         |    <2     |         0          |
+| Number of Major version Ahead |      0       |         1         |     2     |        >=3         |
+|    Number of version Ahead    |     <=2      |        >2         |    >10    |        >15         |
+|     Days since Last push      |     <=90     |        >90        |   >365    |      > 2*365       |
+|     Number of open issues     |     <=30     |        >30        |   >100    |         -          |
+|    Number of Github Stars     |    >=100     |       <100        |    <10    |         -          |
+|             Like              |    >=1000    |       <1000       |   <100    |         -          |
+|          Popularity           |    >=90%     |       <90%        |   <70%    |         -          |
+|     Number of Pub points      |    >=120     |       <120        |    <90    |         -          |
+
+
+This is an example of what looks like the generated html.
+		
 
 ![score_pubspec screeshot](documentation/score_pubspec.png)
 

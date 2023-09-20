@@ -213,7 +213,7 @@ Future<String> _toHtml(List<PackageInfo> packagesInfo, Scoring scoring) async {
   background-color: #3630a3;
   color: white;
 }
-.minimal { color:white; background-color:black }
+.minimal { color:white; background-color:darkred }
 .low { color:white; background-color:red }
 .moderate { background-color:orange}
 .high { background-color:lightGreen }
@@ -330,7 +330,7 @@ class DefaultScoring implements Scoring {
   @override
   Score? scoreOpenIssuesCount(int? openIssuesCount) {
     if (openIssuesCount == null) return null;
-    if (openIssuesCount > 70) return Score.low;
+    if (openIssuesCount > 100) return Score.low;
     if (openIssuesCount > 30) return Score.moderate;
 
     return Score.high;
@@ -359,7 +359,7 @@ class DefaultScoring implements Scoring {
     if (daysSinceLastPush == null) return null;
     if (daysSinceLastPush > 2 * 365) return Score.minimal;
     if (daysSinceLastPush > 365) return Score.low;
-    if (daysSinceLastPush > 180) return Score.moderate;
+    if (daysSinceLastPush > 90) return Score.moderate;
 
     return Score.high;
   }
@@ -367,8 +367,9 @@ class DefaultScoring implements Scoring {
   @override
   Score? scoreNumberOfVersionsAhead(int? numberOfVersionsAhead) {
     if (numberOfVersionsAhead == null) return null;
+    if (numberOfVersionsAhead > 20) return Score.minimal;
     if (numberOfVersionsAhead > 10) return Score.low;
-    if (numberOfVersionsAhead > 5) return Score.moderate;
+    if (numberOfVersionsAhead > 2) return Score.moderate;
 
     return Score.high;
   }
@@ -376,9 +377,9 @@ class DefaultScoring implements Scoring {
   @override
   Score? scoreNumberOfMajorVersionsAhead(int? numberOfMajorVersionsAhead) {
     if (numberOfMajorVersionsAhead == null) return null;
-    if (numberOfMajorVersionsAhead > 4) return Score.minimal;
-    if (numberOfMajorVersionsAhead > 2) return Score.low;
-    if (numberOfMajorVersionsAhead > 1) return Score.moderate;
+    if (numberOfMajorVersionsAhead > 2) return Score.minimal;
+    if (numberOfMajorVersionsAhead > 1) return Score.low;
+    if (numberOfMajorVersionsAhead > 0) return Score.moderate;
 
     return Score.high;
   }

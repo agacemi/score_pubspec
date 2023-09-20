@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.0.3 (2023-09-20)
+
+### Features
+
+- Update scale
+- Enhance documentation
+
 ## 0.0.2 (2023-09-19)
 
 ### Fix
