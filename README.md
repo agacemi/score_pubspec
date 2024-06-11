@@ -1,7 +1,8 @@
-A Dart script to score libraries referenced in a given pubspec.lock. it generates an html file with some information about the lib. The rating is highlighted by colors (green, orange, red, black). Scoring is based on the following scale:
+A Dart script to score libraries referenced in a given pubspec.lock. it generates an html file with some information
+about the lib. The rating is highlighted by colors (green, orange, red, black). Scoring is based on the following scale:
 
 | Scoring                       | high (green) | moderate (orange) | low (red) | minimal (dark red) |
-| ----------------------------- | :----------: | :---------------: | :-------: | :----------------: |
+|-------------------------------|:------------:|:-----------------:|:---------:|:------------------:|
 | Number of Contributors        |     >=5      |        <5         |    <2     |         0          |
 | Number of Active contributors |     >=5      |        <5         |    <2     |         0          |
 | Number of Major version Ahead |      0       |         1         |     2     |        >=3         |
@@ -13,11 +14,9 @@ A Dart script to score libraries referenced in a given pubspec.lock. it generate
 | Popularity                    |    >=90%     |       <90%        |   <70%    |         -          |
 | Number of Pub points          |    >=120     |       <120        |    <90    |         -          |
 
-
 This is an example of what looks like the generated html.
-		
 
-![score_pubspec screeshot](screenshot/score_pubspec.png)
+![score_pubspec screenshot](screenshot/score_pubspec.png)
 
 ## Quick Start 🚀
 
@@ -29,9 +28,9 @@ dart pub global activate score_pubspec
 
 ### Commands ✨
 
-The command requires to define env variable GITHUB_TOKEN thats represents token to make request on gitlab api. 
-### `score_pubspec`
+The command requires to define env variable GITHUB_TOKEN thats represents token to make request on gitlab api.
 
+### `score_pubspec`
 
 #### Usage
 
@@ -39,7 +38,7 @@ The command requires to define env variable GITHUB_TOKEN thats represents token 
 # score pubspec.lock in the current directory
 score_pubspec 
 
-# score the given file with path argment
+# score the given file with path argument
 score_pubspec --path 'path-to-pubspec.lock'
 
 

@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.0.5 (2024-06-11)
+
+### Features
+
+- Upgrade libraries
+- Fix typos
+
 ## 0.0.4 (2023-09-20)
 
 ### Features

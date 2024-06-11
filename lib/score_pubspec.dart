@@ -1,13 +1,13 @@
 import 'dart:io';
 
 import 'package:github/github.dart';
-import 'package:pub_api_client/pub_api_client.dart';
+import 'package:pub_api_client/pub_api_client.dart' as pub_api;
 import 'package:pubspec_lock_parse/pubspec_lock_parse.dart';
 
 import 'model.dart';
 
 class PubspecAnalyzer {
-  final PubClient pubClient;
+  final pub_api.PubClient pubClient;
   final GitHub githubClient;
 
   PubspecAnalyzer({
@@ -44,7 +44,7 @@ class PubspecAnalyzer {
       int? contributorsNumber;
       int? activeContributorsNumber;
       final String url;
-      final PackageScore? packageScore;
+      final pub_api.PackageScore? packageScore;
       final String? latestVersion;
       final int? numberOfVersionsAhead;
       final int? numberOfMajorVersionsAhead;

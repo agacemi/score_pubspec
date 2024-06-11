@@ -1,6 +1,6 @@
 name: score_pubspec
 description: A sample command-line to score pubspec.lock
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/agacemi/score_pubspec.git
 repository: https://github.com/agacemi/score_pubspec.git
 environment:
@@ -10,11 +10,11 @@ executables:
 
 # dependencies:
 dev_dependencies:
-  lints: ^2.0.0
+  lints: ^4.0.0
   test: ^1.16.0
+  build_runner: ^2.4.6
 dependencies:
   args: ^2.4.0
-  build_runner: ^2.4.6
   github: ^9.18.0
   json_annotation: ^4.8.1
   json_serializable: ^6.7.0
