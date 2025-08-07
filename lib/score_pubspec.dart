@@ -243,7 +243,7 @@ Future<String> _toHtml(List<PackageInfo> packagesInfo, Scoring scoring) async {
   table += '\t\t\t<th>Likes</th>\n';
   table += '\t\t\t<th>Popularity</th>\n';
   table += '\t\t\t<th>Number of Pub points</th>\n';
-  table += '\t\t\t<th>Is Forked</th>\n';
+  table += '\t\t\t<th>Is a fork</th>\n';
 
   table += '\t\t</tr>\n';
   table += '\t</thead>\n';

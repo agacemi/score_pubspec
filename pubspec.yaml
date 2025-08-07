@@ -10,13 +10,13 @@ executables:
 
 # dependencies:
 dev_dependencies:
-  lints: ^4.0.0
-  test: ^1.16.0
-  build_runner: ^2.4.6
+  lints: ^5.1.1
+  test: ^1.26.3
+  build_runner: ^2.4.9
 dependencies:
-  args: ^2.4.0
-  github: ^9.18.0
-  json_annotation: ^4.8.1
-  json_serializable: ^6.7.0
-  pub_api_client: ^2.6.0
+  args: ^2.7.0
+  github: ^9.25.0
+  json_annotation: ^4.9.0
+  json_serializable: ^6.8.0
+  pub_api_client: ^2.7.0
   pubspec_lock_parse: ^2.2.0
